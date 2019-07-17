@@ -2,11 +2,22 @@ package com.imooc.pojo;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 public class User {
 	private String name;
+	//不返回密码
+	@JsonIgnore
 	private String password;
 	private Integer age;
+	//时间格式化
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	private Date birthday;
+	//属性值为空时不返回内容
+	@JsonInclude(Include.NON_NULL)
 	private String desc;
 	
 	public String getName() {

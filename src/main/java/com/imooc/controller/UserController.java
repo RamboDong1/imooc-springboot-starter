@@ -23,7 +23,7 @@ public class UserController {
 		u.setAge(18);
 		u.setBirthday(new Date());
 		u.setPassword("imooc");
-		//u.setDesc(null);
+		u.setDesc("Hello Imooc~~");
 		
 		return u;
 	}
@@ -36,7 +36,7 @@ public class UserController {
 		u.setAge(18);
 		u.setBirthday(new Date());
 		u.setPassword("imooc");
-		//u.setDesc(null);
+		u.setDesc("Hello Imooc~~");
 		
 		return ImoocJsonResult.ok(u);
 	}
